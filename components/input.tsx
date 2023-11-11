@@ -1,7 +1,8 @@
+import { ChangeEvent } from 'react';
 import { VscSearch } from 'react-icons/vsc';
 
 interface InputProps {
-  onChangeQuery: (e: any) => void;
+  onChangeQuery: (e: ChangeEvent<HTMLInputElement>) => void;
   query: string;
 }
 

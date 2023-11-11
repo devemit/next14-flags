@@ -1,6 +1,8 @@
+import { ChangeEvent } from 'react';
+
 interface RegionFilterProps {
   selectedCountry: string;
-  onChangeSelected: (e: any) => void;
+  onChangeSelected: (e: ChangeEvent<HTMLSelectElement>) => void;
 }
 
 export default function RegionFilter({ selectedCountry, onChangeSelected }: RegionFilterProps) {

@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import countries from '../countries.json';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,11 +9,11 @@ export default function CountriesList() {
   const [query, setQuery] = useState('');
   const [selectedCountry, setselectedCountry] = useState('');
 
-  function onChangeQuery(event: any) {
+  function onChangeQuery(event: ChangeEvent<HTMLInputElement>) {
     setQuery(event.target.value);
     setselectedCountry('');
   }
-  function onChangeSelected(event: any) {
+  function onChangeSelected(event: ChangeEvent<HTMLInputElement>) {
     setselectedCountry(event.target.value);
     setQuery('');
   }

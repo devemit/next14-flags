@@ -1,6 +1,11 @@
 import Link from 'next/link';
 
-export default function Button({ title, href }: any) {
+interface ButtonProps {
+  title: string;
+  href: string;
+}
+
+export default function Button({ title, href }: ButtonProps) {
   return (
     <button
       type='button'
